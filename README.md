@@ -693,6 +693,17 @@ Relatórios usam realtime subscription na tabela transactions — qualquer inser
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 - Seu **prompt final** (PRD);  
 - Prints ou pequenos vídeos das interações com a IA;  
 - Um resumo do que o seu **App de Finanças Pessoais** faz;  
