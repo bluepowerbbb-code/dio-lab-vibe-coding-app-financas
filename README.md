@@ -547,7 +547,145 @@ Details
 Preview
 Adicionei a tool update_goal_progress ao chat — agora quando o usuário diz algo como "guardei R$200 para minha meta", a IA incrementa o current_amount da meta no banco e a tela de Metas atualiza automaticamente via realtime.
 
-> 
+> PROBLEMA ESTRUTURAL (DATA SYNC):
+
+
+
+Hoje o Consultor Financeiro consegue “corrigir” transações apenas no chat,
+
+mas a tela de Relatórios (tabela, pizza e gráfico) lê diretamente do banco.
+
+Isso cria divergência entre chat e UI.
+
+
+
+CORREÇÃO OBRIGATÓRIA:
+
+
+
+1) Definir o BANCO como única fonte da verdade.
+
+O chat NÃO pode manter estado próprio de transações.
+
+
+
+2) O Consultor Financeiro deve apenas chamar funções CRUD no banco:
+
+- update_transaction
+
+- delete_transaction
+
+
+
+Exemplo:
+
+Se o usuário disser "remova esta transação duplicada",
+
+o Consultor deve chamar delete_transaction no banco,
+
+NUNCA apenas responder em texto.
+
+
+
+3) A tela de Relatórios deve:
+
+- Ler exclusivamente da tabela transactions
+
+- Atualizar automaticamente após qualquer insert/update/delete
+
+
+
+OBJETIVO:
+
+Garantir que chat, tabela, gráficos e totais
+
+estejam sempre 100% sincronizados com o banco.
+
+
+
+NÃO criar novas telas.
+
+NÃO criar lógica em memória.
+
+Apenas corrigir fluxo de dados.
+
+
+PROBLEMA ESTRUTURAL (DATA SYNC):
+
+
+
+Hoje o Consultor Financeiro consegue “corrigir” transações apenas no chat,
+
+mas a tela de Relatórios (tabela, pizza e gráfico) lê diretamente do banco.
+
+Isso cria divergência entre chat e UI.
+
+
+
+CORREÇÃO OBRIGATÓRIA:
+
+
+
+1) Definir o BANCO como única fonte da verdade.
+
+O chat NÃO pode manter estado próprio de transações.
+
+
+
+2) O Consultor Financeiro deve apenas chamar funções CRUD no banco:
+
+- update_transaction
+
+- delete_transaction
+
+
+
+Exemplo:
+
+Se o usuário disser "remova esta transação duplicada",
+
+o Consultor deve chamar delete_transaction no banco,
+
+NUNCA apenas responder em texto.
+
+
+
+3) A tela de Relatórios deve:
+
+- Ler exclusivamente da tabela transactions
+
+- Atualizar automaticamente após qualquer insert/update/delete
+
+
+
+OBJETIVO:
+
+Garantir que chat, tabela, gráficos e totais
+
+estejam sempre 100% sincronizados com o banco.
+
+
+
+NÃO criar novas telas.
+
+NÃO criar lógica em memória.
+
+Apenas corrigir fluxo de dados.
+
+> I'll add update_transaction and delete_transaction tools to the edge function and enable realtime on transactions for auto-refresh.
+
+Enforce DB as source of truth
+
+Details
+Preview
+Pronto! Três mudanças feitas:
+
+Edge function agora tem update_transaction e delete_transaction como tools — o chat modifica diretamente o banco, nunca apenas em texto.
+Contexto de transações inclui IDs para que a IA identifique e referencie transações específicas.
+Relatórios usam realtime subscription na tabela transactions — qualquer insert/update/delete feito pelo chat atualiza os gráficos e tabela automaticamente.
+
+
+
 
 
 
