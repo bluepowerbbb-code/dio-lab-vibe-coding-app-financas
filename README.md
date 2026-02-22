@@ -684,37 +684,125 @@ Edge function agora tem update_transaction e delete_transaction como tools — o
 Contexto de transações inclui IDs para que a IA identifique e referencie transações específicas.
 Relatórios usam realtime subscription na tabela transactions — qualquer insert/update/delete feito pelo chat atualiza os gráficos e tabela automaticamente.
 
+Resultado Final no Lovable: 
+https://kind-finance-pal.lovable.app
+
+
+## 🧩 Resumo das Funcionalidades
+
+O **App de Finanças Conversacionais** é uma aplicação web/PWA que permite ao usuário
+organizar suas finanças pessoais por meio de **conversa natural com IA**, com foco em
+acessibilidade, simplicidade e orientação financeira contínua.
+
+### 🔐 Autenticação e Onboarding
+- Login simples por **e-mail e senha** e **Google**
+- Onboarding conversacional para entender renda, objetivos e preferências
+- Configuração de idioma (**PT-BR / EN**) e opções de acessibilidade
+
+### 💬 Interface Conversacional (Chat Financeiro)
+- Chat como interface principal do app
+- Registro de receitas e despesas por linguagem natural  
+  _Exemplo_: “Gastei 45 reais no mercado hoje”
+- Interpretação automática pela IA com confirmação antes de salvar
+- Histórico de conversas persistido
+
+### ✍️ Registro de Transações Multimodal
+- **Texto**: digitação natural ou copiar/colar extratos
+- **Voz**: botão de microfone com transcrição automática (speech-to-text)
+- **Câmera**:
+  - Captura de comprovantes (nota fiscal/recibo)
+  - Imagem salva como **anexo visual da transação**
+  - OCR planejado para versões futuras (fora do escopo do MVP)
+
+### 🗂️ Categorização Inteligente
+- Categorias padrão (Alimentação, Transporte, Moradia, Saúde, etc.)
+- Sugestão automática de categoria pela IA
+- Possibilidade de edição ou criação de novas categorias
+- Banco de dados como **fonte única da verdade** (chat e UI sincronizados)
+
+### 🎯 Metas Financeiras
+- Criação de metas por conversa natural  
+  _Exemplo_: “Quero juntar R$ 5000 até dezembro”
+- Metas persistidas automaticamente no banco
+- Progresso atualizado em tempo real ao registrar economias
+- Visualização com barra de progresso e estados vazios guiados
+
+### 📊 Relatórios e Resumo Financeiro
+- **Resumo financeiro no topo** (receitas, despesas e saldo)
+- Relatórios com:
+  - Gráfico de pizza (despesas por categoria)
+  - Gráfico de barras (evolução mensal)
+  - Extrato detalhado em tabela
+- Filtros por período e categoria
+- Atualização automática a cada alteração no banco de dados
+
+### ♿ Acessibilidade e Design Universal
+- Interface mobile-first com botões grandes
+- Alto contraste e tamanhos de fonte ajustáveis
+- Compatível com leitores de tela
+- Feedback visual e sonoro
+- Confirmações claras antes de ações importantes
+- Design branco e minimalista no MVP final
+
+### 📱 PWA (Progressive Web App)
+- Aplicação instalável na tela inicial do dispositivo
+- Funcionamento offline básico (visualização de dados recentes)
+- Manifesto, ícones e splash screen configurados
+
+### 🔒 Segurança e Privacidade
+- Criptografia em trânsito (HTTPS)
+- Controle de acesso por usuário (Row Level Security)
+- Storage privado para comprovantes com URLs assinadas
+- Consentimento explícito e conformidade com LGPD
+- Dados não utilizados para publicidade
+
+### 🧠 Diferencial do Projeto
+O projeto aplica o conceito de **Vibe Coding**, utilizando IA como coautora do produto,
+participando ativamente da definição, implementação e evolução das funcionalidades,
+sempre com o banco de dados como fonte única da verdade.
+
+
+## 💭 Reflexão sobre o Processo
+
+### O que funcionou bem?
+A estratégia de **batching**, reunindo múltiplas alterações importantes em um único prompt,
+foi fundamental para viabilizar o projeto dentro do limite de créditos
+(restando apenas **0,7 crédito** até o final do mês).
+
+Essa abordagem evitou desperdício de interações e permitiu manter o app funcional.
+
+Outra decisão acertada foi a substituição do login por **magic link**
+(que apresentava alertas de segurança)
+por um login mais simples e estável via **e-mail e senha**,
+melhorando a confiabilidade do MVP.
+
+### O que não funcionou como o esperado?
+Ao ficar sem créditos, o **Consultor Financeiro** continuou respondendo normalmente no chat,
+porém sem persistir dados no banco.
+
+Isso gerou uma inconsistência importante:
+o usuário acredita que o app está funcionando,
+mas gráficos, tabelas e relatórios não são atualizados.
+
+Essa limitação não é comunicada claramente ao usuário,
+o que pode comprometer a experiência.
+
+Como otimização futura, já planejei corrigir esse comportamento
+via **Vibe Coding** quando os créditos forem renovados
+(em março de 2026).
+
+### O que aprendi sobre conversar com IAs?
+Apesar da interação parecer simples à primeira vista,
+problemas técnicos específicos exigem entendimento real do domínio envolvido.
+
+Para alcançar um resultado profissional,
+não basta apenas “pedir” algo à IA:
+é necessário compreender o problema,
+formular bem as restrições
+e validar o comportamento do sistema como um todo.
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-- Seu **prompt final** (PRD);  
-- Prints ou pequenos vídeos das interações com a IA;  
-- Um resumo do que o seu **App de Finanças Pessoais** faz;  
-- Uma breve **reflexão sobre o processo**:
-  - O que funcionou bem?  
-  - O que não funcionou como o esperado?  
-  - O que aprendeu sobre conversar com IAs?
-
-> [!TIP]
-> Publique seu repositório e compartilhe o link na plataforma da DIO! Sua entrega é a prova de que você domina o raciocínio de Vibe Coding, mesmo sem escrever uma única linha de código.
-
-## 💬 Conclusão
-
-Vibe Coding é sobre clareza, curiosidade e criatividade, não sobre perfeição técnica. O verdadeiro objetivo aqui é aprender a pensar junto com a IA, transformando ideias em conceitos reais e enxergando a tecnologia como uma extensão do seu raciocínio criativo. Cada interação é um experimento, quanto mais clara for sua intenção, mais surpreendente será o resultado.
