@@ -1,6 +1,6 @@
 # 💸 App de Finanças Conversacionais
 
-PRD refinado no Copilot Web Smart GPT-5.1
+PRD Atual
 
 ---
 
@@ -78,6 +78,66 @@ Como consequência, usuários iniciantes, idosos e pessoas com baixa familiarida
 - Modo totalmente por voz  
 - Notificações inteligentes  
 - Personalização avançada do consultor  
+
+---
+
+## 📄 PRD Inicial (Solicitado ao Lovable)
+
+> **Observação:**  
+> Esta seção documenta **o PRD exatamente como foi enviado ao Lovable no início do projeto**,  
+> conforme solicitado pelo professor. Ajustes posteriores estão registrados apenas
+> na seção de Interações com o Lovable.
+
+### PRD refinado no Copilot Web Smart GPT-5.1:
+### PRD Resumido – App de Finanças Conversacionais (MVP 1.1)
+
+**Visão**  
+Aplicativo de organização de finanças pessoais por conversa natural, acessível e seguro.  
+Funciona como um consultor financeiro digital, educativo e empático.
+
+**Problema**  
+Apps atuais exigem formulários complexos, pressupõem conhecimento financeiro  
+e têm baixa acessibilidade → usuários iniciantes e idosos desistem cedo.
+
+**Objetivos**
+- Reduzir esforço de registro
+- Permitir múltiplas formas de entrada (texto, voz, imagem)
+- Garantir acessibilidade (Design Universal)
+- Oferecer orientação financeira clara e contínua
+
+**Público-Alvo**
+- Primário: iniciantes em controle financeiro, quem nunca manteve um app do tipo
+- Secundário: idosos, pessoas com deficiência, baixa familiaridade digital
+
+**Funcionalidades MVP**
+- Registro de transações por texto, voz, câmera ou copiar/colar
+- Consultor financeiro (IA conversacional)
+- Metas sugeridas e ajustáveis
+- Relatórios simples e acessíveis (texto, gráficos básicos, leitura em voz)
+
+**Segurança & Privacidade**
+- Login simples (magic link/social), biometria opcional
+- Criptografia em trânsito e em repouso
+- LGPD, consentimento explícito, dados não usados para publicidade
+
+**Design Universal**
+- Botões grandes, alto contraste, fonte ajustável
+- Compatível com leitores de tela (TalkBack/VoiceOver)
+- Feedback visual e sonoro
+- Tolerância a erros e confirmações fáceis
+
+**Validação do MVP**
+- Tempo médio para registrar gasto
+- % de registros automáticos sem correção
+- Retenção em 7 e 30 dias
+- Taxa de correções manuais
+
+**Roadmap Futuro**
+- Área de investimentos
+- Integração Open Finance
+- Modo totalmente por voz
+- Notificações inteligentes
+- Personalização avançada do consultor
 
 ---
 
@@ -250,6 +310,41 @@ O chat deve operar apenas via funções CRUD no banco.
 **Lovable (resultado):**  
 - update_transaction e delete_transaction implementados  
 - Relatórios sincronizados via realtime  
+
+---
+
+## 🔟 Correções Adicionais (Batching – Sem Novas Features)
+
+**Aluno (batching prompt – 3 fixes):**
+
+Batching 3 fixes (no new features):
+
+- Goals screen (already exists but empty)  
+  - Bind existing goals data to the UI  
+  - Render goal list with progress  
+  - Update in real time when goals are created/updated via chat  
+  - If no goals exist, show empty state with CTA  
+
+- Authentication simplification for MVP  
+  - Align auth with the reference implementation  
+  - Email + password login  
+  - Keep Google login if already enabled  
+  - Magic link removed or deferred post-MVP  
+  - Reduces auth complexity and security configuration issues  
+  - “Leaked password protection” warning accepted at platform level  
+
+- Camera / receipt image layout fix  
+  - Image preview constrained to dedicated container  
+  - Safe areas and bottom navigation respected  
+  - Save button always visible  
+  - Proper z-index and spacing  
+
+**Lovable (resultado):**
+
+Três correções aplicadas:
+- **GoalsPage:** metas carregadas do banco, progresso visual, realtime e empty state com CTA  
+- **Auth:** magic link substituído por e-mail + senha; Google OAuth mantido  
+- **Camera/Preview:** z-index ajustado, container corrigido e navegação não sobreposta  
 
 ---
 
