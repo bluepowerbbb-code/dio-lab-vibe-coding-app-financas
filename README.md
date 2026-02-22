@@ -776,6 +776,21 @@ Outra decisão acertada foi a substituição do login por **magic link**
 por um login mais simples e estável via **e-mail e senha**,
 melhorando a confiabilidade do MVP.
 
+A mudança do **estilo visual amigável e colorido para um design branco e minimalista**
+também trouxe benefícios claros:
+- Melhor legibilidade e menor carga cognitiva
+- Aparência mais neutra e profissional
+- Maior consistência visual entre telas e relatórios
+- Melhor adequação para usuários iniciantes, idosos e pessoas com baixa familiaridade digital
+
+A escolha por desenvolver o app como um **PWA (Progressive Web Application)**
+foi outro ponto positivo do projeto, pois:
+- Permite instalação direta na tela inicial, sem necessidade de app store
+- Oferece experiência próxima à de um aplicativo nativo
+- Funciona em múltiplos dispositivos (desktop e mobile)
+- Possibilita funcionamento offline básico
+- Reduz atrito para adoção por usuários menos experientes
+
 ### O que não funcionou como o esperado?
 Ao ficar sem créditos, o **Consultor Financeiro** continuou respondendo normalmente no chat,
 porém sem persistir dados no banco.
