@@ -355,6 +355,101 @@ https://kind-finance-pal.lovable.app
 
 ---
 
+## 🧩 Resumo das Funcionalidades
+
+O **App de Finanças Conversacionais** é uma aplicação **Web/PWA** que permite ao usuário organizar suas finanças pessoais por meio de **conversa natural com IA**, com foco em **acessibilidade**, **simplicidade** e **orientação financeira contínua**.
+
+---
+
+### 🔐 Autenticação e Onboarding
+- Login simples por **e-mail e senha** ou **Google**
+- Onboarding conversacional para entender renda, objetivos e preferências
+- Configuração de idioma (**PT-BR / EN**) e opções de acessibilidade
+
+---
+
+### 💬 Interface Conversacional (Chat Financeiro)
+- Chat como interface principal do aplicativo
+- Registro de receitas e despesas por linguagem natural  
+  _Exemplo:_ “Gastei 45 reais no mercado hoje”
+- Interpretação automática pela IA com confirmação antes de salvar
+- Histórico de conversas persistido no banco de dados
+
+---
+
+### ✍️ Registro de Transações Multimodal
+- **Texto:** digitação natural ou copiar/colar extratos
+- **Voz:** botão de microfone com transcrição automática (speech-to-text)
+- **Câmera:**
+  - Captura de comprovantes (nota fiscal / recibo)
+  - Imagem salva como anexo visual da transação
+  - OCR planejado para versões futuras (fora do escopo do MVP)
+
+---
+
+### 🗂️ Categorização Inteligente
+- Categorias padrão (Alimentação, Transporte, Moradia, Saúde, etc.)
+- Sugestão automática de categoria pela IA
+- Possibilidade de edição ou criação de novas categorias
+- Banco de dados como **fonte única da verdade** (chat e UI sincronizados)
+
+---
+
+### 🎯 Metas Financeiras
+- Criação de metas por conversa natural  
+  _Exemplo:_ “Quero juntar R$ 5.000 até dezembro”
+- Metas persistidas automaticamente no banco
+- Progresso atualizado em tempo real
+- Visualização com barra de progresso e *empty state* com CTA
+
+---
+
+### 📊 Relatórios e Resumo Financeiro
+- Resumo financeiro no topo (receitas, despesas e saldo)
+- Relatórios com:
+  - Gráfico de pizza (despesas por categoria)
+  - Gráfico de barras (evolução mensal)
+  - Extrato detalhado em tabela
+- Filtros por período e categoria
+- Atualização automática a cada alteração no banco de dados
+
+---
+
+### ♿ Acessibilidade e Design Universal
+- Interface mobile-first com botões grandes
+- Alto contraste e tamanhos de fonte ajustáveis
+- Compatibilidade com leitores de tela
+- Feedback visual e sonoro
+- Confirmações claras antes de ações importantes
+- Design branco e minimalista no MVP final
+
+---
+
+### 📱 PWA (Progressive Web App)
+- Aplicação instalável na tela inicial do dispositivo
+- Funcionamento offline básico (visualização de dados recentes)
+- Manifesto, ícones e splash screen configurados
+
+---
+
+### 🔒 Segurança e Privacidade
+- Criptografia em trânsito (HTTPS)
+- Controle de acesso por usuário (Row Level Security)
+- Storage privado para comprovantes com URLs assinadas
+- Consentimento explícito e conformidade com LGPD
+- Dados não utilizados para publicidade
+
+---
+
+### 🧠 Diferencial do Projeto
+O projeto aplica o conceito de **Vibe Coding**, utilizando a IA como **coautora do produto**, participando ativamente da definição, implementação e evolução das funcionalidades, sempre com o banco de dados como fonte única da verdade.
+
+
+
+---
+
+
+
 # 💭 Reflexão sobre o Processo
 
 ## O que funcionou bem?
