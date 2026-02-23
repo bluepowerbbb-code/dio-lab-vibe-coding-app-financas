@@ -455,7 +455,7 @@ O projeto aplica o conceito de **Vibe Coding**, utilizando a IA como **coautora 
 ## O que funcionou bem?
 
 - Estratégia de **batching**, agrupando várias alterações em um único prompt, essencial devido ao limite de créditos  
-- Substituição do login por magic link por **e-mail e senha**, reduzindo problemas de segurança  
+- Substituição do login via magic link para **e-mail e senha**, reduzindo problemas de segurança  
 - Mudança do design amigável e colorido para **estilo branco e minimalista**, trazendo:
   - Melhor legibilidade  
   - Menor carga cognitiva  
@@ -482,4 +482,4 @@ A IA é uma coautora poderosa, mas o raciocínio e as decisões continuam sendo 
 
 ---
 
-> Projeto desenvolvido utilizando o conceito de **Vibe Coding**, com a IA como coautora ativa do produto, em colaboração com a plataforma Lovable.
+> Projeto desenvolvido utilizando o conceito de **Vibe Coding** em colaboração com a plataforma Lovable.
